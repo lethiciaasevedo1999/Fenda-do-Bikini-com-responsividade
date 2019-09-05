@@ -16,6 +16,15 @@ header{
     height: 220px;
 }
 
+main{
+    background-color: lightgray;
+    grid-area: main;
+}
+
+main h1, main p{
+    text-align: center;
+}
+
 nav{
     align-items: center;
     background-color: #d3bbdb;
@@ -28,15 +37,74 @@ nav{
 nav img{
     width: 35px;
 }
-nav div{
+
+section{
+    align-items: center;
     display: flex;
     flex-direction: column;
-    height: 30px;
+    grid-area: section;
+}
+
+section .funcionarios div img{
+    width: 100px;
+}
+
+section .funcionarios{
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    justify-content: center;
+}
+
+section .funcionarios div img{
+    width: 100px;
+}
+
+
+@media(min-width:580px){
+    header{
+        background-image: url(../images/siri\ cascudo\ wpp.jpg)
+    }
+
+    nav div a{
+        font-size: 14pt;
+        text-decoration: none; 
+    }
+
+    nav div:nth-child(2){
+        display: none;
+    }
+
+    nav div:nth-child(3){
+        display: block;
+    }
+    section.funcionarios{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100vw;
+    }
+      
+}
+
+@media(min-width:710px){
+    header{
+        background-image: url(../images/siri\ cascudo\ wpp.jpg)
+    }
+}
+nav div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    height: 20px;
     justify-content: space-between;
+}
+
+nav div:nth-child(3){
+    display: none;
 }
 
 nav div span{
     background-color: black;
-    height: 5px;
+    height: 3px;
     width: 30px;
 }
